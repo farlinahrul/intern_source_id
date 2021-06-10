@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intern_source_id/view/DashboardPage/DashboardPage.dart';
 
 void main() {
@@ -13,10 +14,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Intern Source',
-      home: DashboardPage(),
+    return AnnotatedRegion(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+
+      ),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Intern Source',
+        home: DashboardPage(),
+      ),
     );
   }
 }

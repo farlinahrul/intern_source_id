@@ -37,6 +37,7 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       body: _children[_bottomNavIndex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
         currentIndex: _bottomNavIndex,
         onTap: onTappedBar,
         selectedLabelStyle: TypographyStyle.miniP,
@@ -55,12 +56,12 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
           BottomNavigationBarItem(
             label: "Forum",
-            icon: Icon(
-              Icons.schedule,
+            icon: _bottomNavIndex == 1 ? Icon(
+              Icons.chat_rounded,
               color: _bottomNavIndex == 1
                   ? PaletteColor.primary
                   : PaletteColor.grey60,
-            ),
+            ): Icon(Icons.mark_chat_unread_rounded),
           ),
           BottomNavigationBarItem(
             label: "Favorite",

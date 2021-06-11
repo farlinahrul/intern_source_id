@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intern_source_id/view/DashboardPage/DashboardPage.dart';
+import 'package:intern_source_id/view/TemplateCVPage/TemplateCVPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Intern Source',
-        home: DashboardPage(),
+        home: TemplateCVPage(),
       ),
     );
   }

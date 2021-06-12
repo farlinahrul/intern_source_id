@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:intern_source_id/ui/pages/login/SplashScreenPage.dart';
+
+import 'ui/pages/loginPage/RegisterPage.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -15,12 +15,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'internSourceID',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: SplashScreenPage(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Intern Source',
+        home: RegisterPage(),
+      );
   }
 }

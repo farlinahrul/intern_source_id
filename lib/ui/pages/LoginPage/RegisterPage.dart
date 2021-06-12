@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intern_source_id/theme/TypographyStyle.dart';
+import 'package:intern_source_id/theme/PaletteColor.dart';
 
 import 'LoginPage.dart';
 
@@ -31,12 +33,9 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             Text(
               'Intern Source ID',
-              style: TextStyle(
-                fontSize: 24,
-                color: Color(0xff0711FB),
-                fontFamily: 'Mulish',
-                fontWeight: FontWeight.w600
-              ),
+              style: TypographyStyle.titleM.merge(TextStyle(
+                color: PaletteColor.grey
+              )),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 42, left: 24, right: 24),
